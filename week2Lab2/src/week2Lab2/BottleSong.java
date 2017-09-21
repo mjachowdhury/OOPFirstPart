@@ -1,13 +1,23 @@
 package week2Lab2;
 
 import java.util.Scanner;
-
+/*
+ * Part a)	Write an application using an int and String variable, a while loop and two if tests 
+ * to output the following song to the screen:	
+ * 
+ * Part b)	When you have the program working as above, alter it to deal with any number of 
+ * bottles where the number is entered from the keyboard. 
+ */
 public class BottleSong {
 
 	public static void main(String[] args) {
 		 
-		int numberOfBottles = 99;
+		int numberOfBottles = 0;
 		String word = "bottle";
+		
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("How many bottle you want to put :" );
+		numberOfBottles = keyboard.nextInt();
 		
 		while(numberOfBottles > 0){
 			System.out.println(numberOfBottles + " " + word + " of juice on the wall" );
