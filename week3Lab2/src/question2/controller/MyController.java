@@ -13,7 +13,7 @@ public class MyController {
 
 	public MyController() {
 		actor = new Actor[2];
-		// myFilm = new Film[3];
+		myFilm = new Film[3];
 	}
 
 	// We expect the view / user interface to gather the name,address
@@ -27,10 +27,8 @@ public class MyController {
 	}
 
 	// If the user interface wants to display all actor. It calls this method
-	// which
-	// will return the array of people to the user interface. It is then the
-	// user interface's job
-	// to display that data.
+	// which will return the array of people to the user interface. It is then the
+	// user interface's job to display that data.
 	public Actor[] displayAllActor() {
 		return this.actor;
 	}

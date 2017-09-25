@@ -12,7 +12,7 @@ public class Actor {
 	// Film[] myFilms = new Film[3];
 	// private List<String> list;
 
-	//private Film[] myFilms;
+	// private Film[] myFilms;
 
 	/**
 	 * Constructor
@@ -29,7 +29,7 @@ public class Actor {
 		this.address = address;
 		this.age = age;
 		// list = new ArrayList<String>();
-		//myFilms = new Film[3];
+		// myFilms = new Film[3];
 	}
 
 	// Getter and Setter methods
@@ -82,17 +82,17 @@ public class Actor {
 	/**
 	 * @return the myFilms
 	 */
-	/*public Film[] getMyFilms() {
-		return myFilms;
-	}*/
+	/*
+	 * public Film[] getMyFilms() { return myFilms; }
+	 */
 
 	/**
 	 * @param myFilms
 	 *            the myFilms to set
 	 */
-	/*public void setMyFilms(Film[] myFilms) {
-		this.myFilms = myFilms;
-	}*/
+	/*
+	 * public void setMyFilms(Film[] myFilms) { this.myFilms = myFilms; }
+	 */
 
 	/*
 	 * (non-Javadoc)
@@ -100,13 +100,14 @@ public class Actor {
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	/*public String toString() {
-		return "Actor [name=" + name + ", address=" + address + ", age=" + age + ", myFilms=" + Arrays.toString(myFilms)
-				+ "]";
-	}*/
-	
+	/*
+	 * public String toString() { return "Actor [name=" + name + ", address=" +
+	 * address + ", age=" + age + ", myFilms=" + Arrays.toString(myFilms) + "]";
+	 * }
+	 */
+
 	public String toString() {
-		return "Actor [name=" + name + ", address=" + address + ", age=" + age +"]";
+		return "Actor [name=" + name + ", address=" + address + ", age=" + age + "]";
 	}
 
 	/*
