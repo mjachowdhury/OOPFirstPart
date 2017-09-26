@@ -5,7 +5,7 @@ public class Student {
 	 * This class is about student details and setting and getting the values of
 	 * the student and finding the grade.
 	 */
-	
+
 	// instance variables
 	private String firstName;
 	private String lastName;
