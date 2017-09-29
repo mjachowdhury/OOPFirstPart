@@ -31,7 +31,7 @@ public class TestStudentPartA {
 		String firstName = "";
 		String lastName = "";
 		double mark = 0;
-		String grade = "";
+		// String grade = "";
 
 		Student[] student = new Student[2]; // creating student object with
 											// default number of students
@@ -48,11 +48,14 @@ public class TestStudentPartA {
 			lastName = keyboard.next();
 			System.out.println("Enter Studnet Mark :");
 			mark = keyboard.nextDouble();
-
+			keyboard.close();
 			// creating student object and putting all the values inside the
 			// array
-			Student stud = new Student(firstName, lastName, mark);
-			student[i] = stud;
+			Student stud = new Student(firstName, lastName, mark);// Creating
+																	// new
+																	// object of the 
+																	// Student
+			student[i] = stud;// Storing the student details into student array
 		}
 
 		// This loop will iterate all the student details from the student array

@@ -1,25 +1,29 @@
 package question3;
 
 public class Person {
+	//Fields variables 
 	private int stars;
 	private String phone;
 	private String name;
-	
-	public Person(int stars, String phone, String name){
+
+	//Constructor
+	public Person(int stars, String phone, String name) {
 		this.stars = stars;
 		this.phone = phone;
 		this.name = name;
 	}
 
+	//Getter and Setter
 	/**
 	 * @return the stars
 	 */
 	public int getStars() {
-		return  stars;
+		return stars;
 	}
 
 	/**
-	 * @param stars the stars to set
+	 * @param stars
+	 *            the stars to set
 	 */
 	public void setStars(int stars) {
 		this.stars = stars;
@@ -33,7 +37,8 @@ public class Person {
 	}
 
 	/**
-	 * @param phone the phone to set
+	 * @param phone
+	 *            the phone to set
 	 */
 	public void setPhone(String phone) {
 		this.phone = phone;
@@ -47,25 +52,28 @@ public class Person {
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	 
+	/*
+	This method will display the details of the person*/
+
 	public String toString() {
-		return "Person Name = " + name + " jumped=" + stars + " times and phone number is " + phone + ".";
+		return "Person Name is : " + name + " Jumped=" + stars + " times and phone number is " + phone + ".";
 	}
+
+	/*This method will call the toString method*/
 	
-	public void print(){
+	public void print() {
 		System.out.println(toString());
 	}
-	public String jump(){
+
+	public String jump() {
 		return "I jumped";
 	}
- 
+
 }

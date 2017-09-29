@@ -18,6 +18,7 @@ public class BottleSong {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("How many bottle you want to put :" );
 		numberOfBottles = keyboard.nextInt();
+		keyboard.close();
 		
 		while(numberOfBottles > 0){
 			System.out.println(numberOfBottles + " " + word + " of juice on the wall" );

@@ -5,17 +5,17 @@ package question2;
  */
 public class Student {
 
-	//instance variables
+	// instance variables
 	private String firstName;
 	private String lastName;
 	private double mark;
 	private String grade;
 
-	//constructor no 1
+	// constructor no 1
 	public Student() {
 	}
 
-	//constructor no 2 with parameters
+	// constructor no 2 with parameters
 	public Student(String firstName, String lastName, double mark) {
 		this.firstName = firstName;
 		this.lastName = lastName;
