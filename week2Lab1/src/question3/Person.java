@@ -1,7 +1,7 @@
 package question3;
 
 public class Person {
-	//Fields variables 
+	//Field variables 
 	private int stars;
 	private String phone;
 	private String name;
@@ -63,7 +63,7 @@ public class Person {
 	This method will display the details of the person*/
 
 	public String toString() {
-		return "Person Name is : " + name + " Jumped=" + stars + " times and phone number is " + phone + ".";
+		return "Person Name is : " + name + " Jumped - " + stars + " times and phone number is " + phone + ".";
 	}
 
 	/*This method will call the toString method*/
