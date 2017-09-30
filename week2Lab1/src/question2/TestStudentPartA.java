@@ -27,20 +27,20 @@ import java.util.Scanner;
 public class TestStudentPartA {
 
 	public static void main(String[] args) {
+		//Field variables
+		String firstName;
+		String lastName;
+		double mark;
 
-		String firstName = "";
-		String lastName = "";
-		double mark = 0;
-		// String grade = "";
-
-		Student[] student = new Student[2]; // creating student object with
-											// default number of students
+		// creating student object with default number of students
+		Student[] student = new Student[2];
 
 		Scanner keyboard = new Scanner(System.in);
 		System.out.println("Enter the Student details.");
 		System.out.println("==========================");
 
 		// this loop will take student details from the user
+
 		for (int i = 0; i < student.length; i++) {
 			System.out.println("Enter Studnet First Name :");
 			firstName = keyboard.next();
@@ -48,22 +48,23 @@ public class TestStudentPartA {
 			lastName = keyboard.next();
 			System.out.println("Enter Studnet Mark :");
 			mark = keyboard.nextDouble();
-			keyboard.close();
+
 			// creating student object and putting all the values inside the
 			// array
-			Student stud = new Student(firstName, lastName, mark);// Creating
-																	// new
-																	// object of the 
-																	// Student
+			Student stud = new Student(firstName, lastName, mark);
 			student[i] = stud;// Storing the student details into student array
-		}
+		} // end for loop
+
+		keyboard.close();
+
+		System.out.println("==========================================");
+		System.out.println("           Student Details                ");
+		System.out.println("------------------------------------------");
 
 		// This loop will iterate all the student details from the student array
 		for (int i = 0; i < student.length; i++) {
 			System.out.println(student[i].getFirstName() + " " + student[i].getLastName() + " received a "
 					+ student[i].getGrade() + " for his mark of " + student[i].getMark() + ".");
-			// result = student[i];
-			System.out.println(student[i].getGrade());
 		}
 
 	}

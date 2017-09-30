@@ -22,6 +22,7 @@ public class Student {
 		this.mark = mark;
 	}
 
+	//Getter and Setter method
 	/**
 	 * @return the firstName
 	 */
