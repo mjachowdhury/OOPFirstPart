@@ -1,6 +1,7 @@
 package question1;
 
 import java.util.Scanner;
+
 /*
  * Part a)	Write an application using an int and String variable, a while loop and two if tests 
  * to output the following song to the screen:	
@@ -11,33 +12,28 @@ import java.util.Scanner;
 public class BottleSong {
 
 	public static void main(String[] args) {
-		 
+
 		int numberOfBottles = 0;
 		String word = "bottle";
-		
+
 		Scanner keyboard = new Scanner(System.in);
-		System.out.println("How many bottle you want to put :" );
+		System.out.println("How many bottle you want to put :");
 		numberOfBottles = keyboard.nextInt();
 		keyboard.close();
-		
-		while(numberOfBottles > 0){
-			System.out.println(numberOfBottles + " " + word + " of juice on the wall" );
-			//System.out.println(numberOfBottles + " " + word + " of juice" );
+
+		while (numberOfBottles > 0) {
+			System.out.println(numberOfBottles + " " + word + " of juice on the wall");
 			System.out.println("Take one down.");
 			System.out.println("Pass it around.");
-			
-			numberOfBottles =numberOfBottles - 1;
+			System.out.println();
+			numberOfBottles = numberOfBottles - 1;
+		}//End while loop
+		if (numberOfBottles == 1) {
+			word = "bottle";// one bottle
 		}
-		if(numberOfBottles == 1){
-			word = "bottle";//one bottle
-		}
-		/*if(numberOfBottles > 0){
-			System.out.println(numberOfBottles +" " + word + "of juice on the wall.");
-			System.out.println("======================================");			
-		}*/
 		else {
 			System.out.println("No more bottles of juice left on the wall.");
 		}
-	}
+	}//end main
 
-}
+}//end class
