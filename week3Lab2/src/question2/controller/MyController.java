@@ -18,6 +18,7 @@ public class MyController {
 
 	// We expect the view / user interface to gather the name,address
 	// and age of a actor which we wish to add to the system.
+
 	public void addActor(String nameFromView, String addressFromView, int ageFromView) {
 		// Create a actor object using the data received from the view
 		Actor a = new Actor(nameFromView, addressFromView, ageFromView);
@@ -27,8 +28,10 @@ public class MyController {
 	}
 
 	// If the user interface wants to display all actor. It calls this method
-	// which will return the array of people to the user interface. It is then the
+	// which will return the array of people to the user interface. It is then
+	// the
 	// user interface's job to display that data.
+
 	public Actor[] displayAllActor() {
 		return this.actor;
 	}
@@ -44,6 +47,13 @@ public class MyController {
 		Film f = new Film(filmNameFromView, codeFormView);
 		myFilm[numberOfFilm] = f;
 		numberOfFilm++;
+		// once all films are entered(3) we assign the film array to each actor,
+		// shallow copy
+		if (numberOfFilm == 3) {
+			actor[0].setMyFilms(myFilm);
+			actor[1].setMyFilms(myFilm);
+		}
+		// actor[0].setMyFilms(myFilm);
 	}
 
 	public Film[] displayAllFilm() {

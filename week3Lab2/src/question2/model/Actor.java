@@ -1,7 +1,5 @@
 package question2.model;
 
-import java.util.Arrays;
-
 public class Actor {
 	// Fields
 	private String name;
@@ -12,7 +10,7 @@ public class Actor {
 	// Film[] myFilms = new Film[3];
 	// private List<String> list;
 
-	// private Film[] myFilms;
+	private Film[] myFilms;
 
 	/**
 	 * Constructor
@@ -29,7 +27,7 @@ public class Actor {
 		this.address = address;
 		this.age = age;
 		// list = new ArrayList<String>();
-		// myFilms = new Film[3];
+		myFilms = new Film[3];
 	}
 
 	// Getter and Setter methods
@@ -82,24 +80,20 @@ public class Actor {
 	/**
 	 * @return the myFilms
 	 */
-	/*
-	 * public Film[] getMyFilms() { return myFilms; }
-	 */
+
+	public Film[] getMyFilms() {
+		return myFilms;
+	}
 
 	/**
 	 * @param myFilms
 	 *            the myFilms to set
 	 */
-	/*
-	 * public void setMyFilms(Film[] myFilms) { this.myFilms = myFilms; }
-	 */
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
+	public void setMyFilms(Film[] myFilms) {
+		this.myFilms = myFilms;
+	}
+
 	/*
 	 * public String toString() { return "Actor [name=" + name + ", address=" +
 	 * address + ", age=" + age + ", myFilms=" + Arrays.toString(myFilms) + "]";
@@ -107,7 +101,14 @@ public class Actor {
 	 */
 
 	public String toString() {
-		return "Actor [name=" + name + ", address=" + address + ", age=" + age + "]";
+		String actorText = "Actor [name=" + name + ", address=" + address + ", age=" + age + "]";
+		String filmText = "";
+		// added the film text
+		for (int i = 0; i < myFilms.length; i++) {
+			filmText += myFilms[i].toString();
+		}
+
+		return actorText + "\n\t" + filmText;
 	}
 
 	/*

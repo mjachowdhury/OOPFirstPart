@@ -13,11 +13,14 @@ public class StudentView {
 	private Scanner keyboard;
 
 	private int menuChoice = 0;
+
 	private StudentController theStudentController;
 
 	public StudentView() {
-		this.theStudentController = new StudentController();
 
+		this.theStudentController = new StudentController();
+		//always initialize variables so no null pointer exceptions
+		keyboard = new Scanner(System.in);
 	}
 
 	public void startUserInterface() {
@@ -42,12 +45,16 @@ public class StudentView {
 				mark = keyboard.nextDouble();
 
 				this.theStudentController.addStudent(firstName, lastName, mark);
+
 				break;
 			}
-			/*
-			 * case REMOVE_A_STUDENT :{ break; } case DISPLAY_ALL_STUDENT :{
-			 * break; }
-			 */
+			
+			  case REMOVE_A_STUDENT :{ break; } 
+			  case DISPLAY_ALL_STUDENT :{
+			  break; 
+			  }
+			   
+			 
 			}
 		}
 

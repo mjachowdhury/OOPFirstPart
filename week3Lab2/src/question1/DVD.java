@@ -1,7 +1,7 @@
 package question1;
 
 /**
- * This class hold hte details of the DVD.
+ * This class hold the details of the DVD.
  *
  * @author (Mohammed J Alom)
  * @version (a version number or a date)
@@ -20,18 +20,13 @@ public class DVD
      */
     public DVD(String title,String genre,String artist)
     {
-        // initialise instance variables
+        // Initialize instance variables
         this.title = title;
         this.genre = genre;
         this.artist = artist;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
+    //Getter and setter
     public String getTitel()
     {
         // put your code here

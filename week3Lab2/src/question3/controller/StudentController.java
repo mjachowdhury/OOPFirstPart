@@ -15,12 +15,17 @@ public class StudentController {
 
 	public void addStudent(String firstNameFromView, String lastNameFromView, double markFromView) {
 		Student s = new Student(firstNameFromView, lastNameFromView, markFromView);
+
 		s.setFirstName(firstNameFromView);
 		s.setLastName(lastNameFromView);
 		s.setMark(markFromView);
+
 		// this.studentService.getStudentList().add(s);
+
 		this.studentService.addStudentToList(s);
-		//this.studentService.addStudentToList(new Student(firstNameFromView,lastNameFromView,markFromView));
+
+		// this.studentService.addStudentToList(new
+		// Student(firstNameFromView,lastNameFromView,markFromView));
 	}
 
 	/*

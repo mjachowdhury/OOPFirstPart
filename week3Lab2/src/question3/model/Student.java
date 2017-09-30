@@ -94,4 +94,15 @@ public class Student {
 		this.grade = grade;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Student [firstName=" + firstName + ", lastName=" + lastName + ", mark=" + mark + ", grade=" + grade
+				+ "]";
+	}
+
 }
