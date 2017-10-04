@@ -1,7 +1,5 @@
 package question2;
 
-import question2.model.Actor;
-import question2.model.Film;
 import question2.view.MyView;
 
 public class MainTest {

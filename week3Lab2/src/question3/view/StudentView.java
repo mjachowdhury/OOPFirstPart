@@ -3,7 +3,6 @@ package question3.view;
 import java.util.Scanner;
 
 import question3.controller.StudentController;
-import question3.model.StudentService;
 
 public class StudentView {
 	private static final int ADD_A_STUDENT = 1;
@@ -17,9 +16,9 @@ public class StudentView {
 	private StudentController theStudentController;
 
 	public StudentView() {
-
+		//Creating StudentController object
 		this.theStudentController = new StudentController();
-		//always initialize variables so no null pointer exceptions
+		// always initialize variables so no null pointer exceptions
 		keyboard = new Scanner(System.in);
 	}
 
@@ -45,24 +44,37 @@ public class StudentView {
 				mark = keyboard.nextDouble();
 
 				this.theStudentController.addStudent(firstName, lastName, mark);
-
+				System.out.println("Student details successfully added to the system.");
 				break;
 			}
-			
-			  case REMOVE_A_STUDENT :{ break; } 
-			  case DISPLAY_ALL_STUDENT :{
-			  break; 
-			  }
-			   
-			 
-			}
-		}
 
-	}
+			case REMOVE_A_STUDENT: {
+				String fName;
+				String lName;
+				System.out.println("Enter First Name:");
+				fName = keyboard.next();
+				System.out.println("Enter Last Name: ");
+				lName = keyboard.next();
+
+				this.theStudentController.removeStudent(fName, lName);
+				System.out.println("Successfully removed from the system.");
+				break;
+			}
+
+			case DISPLAY_ALL_STUDENT: {
+				this.theStudentController.displayAllStudent();
+				break;
+			}
+
+		}//end of switch
+			printMenu();
+			menuChoice = keyboard.nextInt();
+		}//end of while loop
+		System.out.println("Good Bye");
+	}//end of method
 
 	public void printMenu() {
-
-		System.out.println();
+		System.out.println("===========Student Management System===============");
 		System.out.println("1. Add a Student in the System :");
 		System.out.println("2. Remove a Student from the System :");
 		System.out.println("3. Display all Student from the System :");

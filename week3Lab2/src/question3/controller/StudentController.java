@@ -8,24 +8,18 @@ public class StudentController {
 	private StudentService studentService;
 
 	public StudentController() {
-
+		//Creating the StudentService object.
 		this.studentService = new StudentService();
-		// this.studentList = new ArrayList<Student>();
+
 	}
 
+	/*
+	 * This method will add the student this method is connected StudentService and StudentView.Its working as a  controller
+	 */
 	public void addStudent(String firstNameFromView, String lastNameFromView, double markFromView) {
 		Student s = new Student(firstNameFromView, lastNameFromView, markFromView);
 
-		s.setFirstName(firstNameFromView);
-		s.setLastName(lastNameFromView);
-		s.setMark(markFromView);
-
-		// this.studentService.getStudentList().add(s);
-
 		this.studentService.addStudentToList(s);
-
-		// this.studentService.addStudentToList(new
-		// Student(firstNameFromView,lastNameFromView,markFromView));
 	}
 
 	/*
@@ -33,4 +27,23 @@ public class StudentController {
 	 * studentService.removeStudnetFromList(s); }
 	 */
 
+	/*
+	 * This method will remove the student this method is connected StudentService and StudentView.Its working as a  controller
+	 */
+	public void removeStudent(String fname, String lName) {
+		int indexOfNameToRomove = -1;
+		for (Student currentStudent : this.studentService.getTheStudents()) {
+			if (currentStudent.getFirstName().equals(fname) && currentStudent.getLastName().equals(lName)) {
+				indexOfNameToRomove = this.studentService.getTheStudents().indexOf(currentStudent);
+			}
+		}
+		this.studentService.getTheStudents().remove(indexOfNameToRomove);
+	}
+
+	/*
+	 * This method will display all the student this method is connected StudentService and StudentView.Its working as a  controller
+	 */
+	public void displayAllStudent() {
+		this.studentService.displayAllStudent();
+	}
 }

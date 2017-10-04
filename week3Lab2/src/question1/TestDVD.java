@@ -34,7 +34,7 @@ public class TestDVD {
 								// variable of dvd1
 		dvd1.setTitle("Song Bird"); // Setting the title
 		dvd1.setGenre("Blues");
-		dvd1.setTitle("Eva Cassidy");// Setting the artist
+		dvd1.setArtist("Eva Cassidy");// Setting the artist
 
 		DVD dvd2 = new DVD("Johnny b. Goode", "Chuck Berry", "George Hook");
 

@@ -3,34 +3,48 @@ package question3.model;
 import java.util.ArrayList;
 
 public class StudentService {
+	
+	//Declaring the Student as ArrayList
+	private ArrayList<Student> theStudents;
 
-	private ArrayList<Student> studentList;
-
+	//Creating Student object through ArrayList
 	public StudentService() {
-		this.studentList = new ArrayList<Student>();
+		this.theStudents = new ArrayList<Student>();
 	}
 
 	/**
-	 * @return the studentList
+	 * @return the theStudents
 	 */
-	public ArrayList<Student> getStudentList() {
-		return studentList;
+	public ArrayList<Student> getTheStudents() {
+		return theStudents;
 	}
 
 	/**
-	 * @param studentList
-	 *            the studentList to set
+	 * @param theStudents
+	 *            the theStudents to set
 	 */
-	public void setStudentList(ArrayList<Student> studentList) {
-		this.studentList = studentList;
+	public void setTheStudents(ArrayList<Student> theStudents) {
+		this.theStudents = theStudents;
 	}
 
+	/*
+	 * This method will add student object in the ArrayList
+	 */
 	public void addStudentToList(Student s) {
-		this.studentList.add(s);
+		this.theStudents.add(s);
 	}
 
-	public void removeStudnetFromList(Student s) {
-		this.studentList.remove(s);
+	// public void removeStudnetFromList(Student s) {
+	// this.theStudents.remove(s);
+	// }
+
+	/*
+	 * This method will display the total student from the system.
+	 */
+	public void displayAllStudent() {
+		for (Student s : theStudents) {
+			s.print();
+		}
 	}
 
 }

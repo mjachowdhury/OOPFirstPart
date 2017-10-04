@@ -94,15 +94,19 @@ public class Student {
 		this.grade = grade;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
-		return "Student [firstName=" + firstName + ", lastName=" + lastName + ", mark=" + mark + ", grade=" + grade
-				+ "]";
+		System.out.println("=================Student Details================");
+		System.out.println();
+		return ("Student Name  :\t " + this.getFirstName() + "  " + this.getLastName() + "\nStudent Mark  :\t "
+				+ this.getMark() + "\nStudent Grade :\t" + this.getGrade());
+	}
+
+	/*
+	 * This method will print the toString method.
+	 */
+	public void print() {
+		System.out.println(toString());
 	}
 
 }
