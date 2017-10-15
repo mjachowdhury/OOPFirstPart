@@ -4,71 +4,45 @@ package question1;
  * This class hold the details of the DVD.
  *
  * @author (Mohammed J Alom)
- * @version (a version number or a date)
+ * @version (01/10/2017)
  */
-public class DVD
-{
-    // instance variables - replace the example below with your own
-    private String title;
-    private String genre;
-    private String artist;
-    
-    public DVD(){}
+public class DVD {
+	// instance variables - replace the example below with your own
+	private String title;
+	private String genre;
+	private String artist;
 
-    /**
-     * Constructor for objects of class DVD
-     */
-    public DVD(String title,String genre,String artist)
-    {
-        // Initialize instance variables
-        this.title = title;
-        this.genre = genre;
-        this.artist = artist;
-    }
+	public DVD() {
+	}
 
-    //Getter and setter
-    public String getTitel()
-    {
-        // put your code here
-        return title; 
-    }
-    
-    public void setTitle(String title)
-    {
-        this.title = title;
-    }
+	/**
+	 * Constructor for objects of class DVD
+	 */
+	public DVD(String title, String artist) {
+		// Initialize instance variables
+		this.title = title;
+		this.artist = artist;
+	}
 
-    public String getGenre()
-    {
-        // put your code here
-        return genre; 
-    }
-    
-    public void setGenre(String genre)
-    {
-        this.genre = genre;
-    }
-    
-    public String getArtist()
-    {
-        // put your code here
-        return artist; 
-    }
-    
-    public void setArtist(String artist)
-    {
-        this.artist = artist;
-    }
-    
-    public String toString ()
-    {
-        return "DVD Details : " + title + " genre " +genre+ " and Artist is " 
-                                + artist;
-    }
-    
-    public void print()
-    {
-        System.out.println(toString());
-    }
+	// Getter and setter
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+
+	public String toString() {
+		return "DVD Details : " + title + " and Artist is " + artist;
+	}
+
+	public void print() {
+		System.out.println(toString());
+	}
 }
-

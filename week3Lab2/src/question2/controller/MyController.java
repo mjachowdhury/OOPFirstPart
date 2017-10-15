@@ -25,6 +25,7 @@ public class MyController {
 		// Put this new object into the array
 		actor[numberOfActor] = a;
 		numberOfActor++;
+
 	}
 
 	// If the user interface wants to display all actor. It calls this method
@@ -53,7 +54,7 @@ public class MyController {
 			actor[0].setMyFilms(myFilm);
 			actor[1].setMyFilms(myFilm);
 		}
-		// actor[0].setMyFilms(myFilm);
+
 	}
 
 	public Film[] displayAllFilm() {

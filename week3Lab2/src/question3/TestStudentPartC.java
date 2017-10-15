@@ -8,6 +8,9 @@ import question3.view.StudentView;
 public class TestStudentPartC {
 
 	public static void main(String[] args) {
+
+		System.out.println("\t\tWEL COME TO THE STUDENT MANAGEMENT PROGRAM");
+		System.out.println("\t\t==========================================");
 		StudentView studentView = new StudentView();
 		studentView.startUserInterface();
 	}

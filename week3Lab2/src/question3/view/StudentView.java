@@ -16,7 +16,7 @@ public class StudentView {
 	private StudentController theStudentController;
 
 	public StudentView() {
-		//Creating StudentController object
+		// Creating StudentController object
 		this.theStudentController = new StudentController();
 		// always initialize variables so no null pointer exceptions
 		keyboard = new Scanner(System.in);
@@ -25,6 +25,13 @@ public class StudentView {
 	public void startUserInterface() {
 
 		printMenu();
+		while (!keyboard.hasNextInt()) {
+			keyboard.next();
+
+			System.out.println("Wrong Choice!!");
+			System.out.println("Please Enter (1 - 4) to Continue..");
+			printMenu();
+		}
 		menuChoice = keyboard.nextInt();
 
 		while (menuChoice != EXIT) {
@@ -32,53 +39,111 @@ public class StudentView {
 			switch (menuChoice) {
 
 			case ADD_A_STUDENT: {
+				System.out.println("\tWE HAVE SELECTED TO ADD STUDENT DETAILS.");
+				System.out.println("\t----------------------------------------");
+				System.out.println();
+
 				String firstName;
 				String lastName;
 				double mark = 0;
 
-				System.out.println("Please enter first name :");
+				System.out.println("PLEASE ENTER FIRST NAME :");
+				while (!keyboard.hasNext("[A-Za-z]+")) {
+					keyboard.next();
+					System.out.println("WRONG INPUT!! PLEASE ENTER CHARACTER.");
+					System.out.println("PLEASE ENTER YOUR FIRST NAME :");
+				}
 				firstName = keyboard.next();
-				System.out.println("Please enter last name :");
+
+				System.out.println("PLEASE ENTER LAST NAME :");
+				while (!keyboard.hasNext("[A-Za-z]+")) {
+					keyboard.next();
+					System.out.println("WRONG INPUT!! PLEASE ENTER CHARACTER.");
+					System.out.println("PLEASE ENTER LAST NAME :");
+				}
 				lastName = keyboard.next();
-				System.out.println("Please enter mark :");
+
+				System.out.println("PLEASE ENTER MARK :");
+				while (!keyboard.hasNextDouble()) {
+					keyboard.next();
+					System.out.println("WRONG INPUT!! PLEASE ENTER DOUBLE VALUE.");
+					System.out.println("PLEASE ENTER MARK :");
+				}
 				mark = keyboard.nextDouble();
 
 				this.theStudentController.addStudent(firstName, lastName, mark);
-				System.out.println("Student details successfully added to the system.");
+				System.out.println("STUDENT DETAILS ENTERED SYCCESSFULLY.");
 				break;
 			}
 
 			case REMOVE_A_STUDENT: {
-				String fName;
-				String lName;
-				System.out.println("Enter First Name:");
-				fName = keyboard.next();
-				System.out.println("Enter Last Name: ");
-				lName = keyboard.next();
+				System.out.println("\tWE HAVE SELECTED TO REMOVE THE STUDENTS.");
+				System.out.println("\t------------------------------------------");
+				System.out.println();
 
-				this.theStudentController.removeStudent(fName, lName);
-				System.out.println("Successfully removed from the system.");
+				if (theStudentController.getNoOfStudent() == 0) {
+					System.out.println("NO STUDENT INTO THE SYSTEM YET.");
+					System.out.println("YOU HAVE TO ADD BEFORE YOU CAN REMOVE.");
+				} else {
+					String fName;
+					String lName;
+
+					System.out.println("ENTER STUDENT FRIST NAME:");
+					while (!keyboard.hasNext("[A-Za-z]+")) {
+						keyboard.next();
+						System.out.println("WRONG INPUT!! PLEASE ENTER CHARACTER.");
+						System.out.println("ENTER STUDENT FRIST NAME:");
+					}
+					fName = keyboard.next();
+
+					System.out.println("ENTER STUDENT LAST NAME: ");
+					while (!keyboard.hasNext("[A-Za-z]+")) {
+						keyboard.next();
+						System.out.println("WRONG INPUT!! PLEASE ENTER CHARACTER.");
+						System.out.println("ENTER STUDENT LAST NAME: ");
+					}
+					lName = keyboard.next();
+
+					this.theStudentController.removeStudent(fName, lName);
+					System.out.println("STUDENT REMOVED SUCCESSFULLY FROM THE SYSTEM.");
+				} // end of else
 				break;
 			}
 
 			case DISPLAY_ALL_STUDENT: {
-				this.theStudentController.displayAllStudent();
+				System.out.println("\tWE HAVE SELECTED TO VIEW ALL THE STUDENTS.");
+				System.out.println("\t------------------------------------------");
+				System.out.println();
+
+				if (theStudentController.getNoOfStudent() == 0) {
+					System.out.println("NO STUDENT INTO THE SYSTEM YET.");
+					System.out.println("YOU HAVE TO ADD STUDENT BEFORE YOU CAN DISPLAY.");
+				} else {
+					this.theStudentController.displayAllStudent();
+				}
 				break;
 			}
 
-		}//end of switch
+			}// end of switch
 			printMenu();
 			menuChoice = keyboard.nextInt();
-		}//end of while loop
+		} // end of while loop
 		System.out.println("Good Bye");
-	}//end of method
+	}// end of method
 
 	public void printMenu() {
-		System.out.println("===========Student Management System===============");
-		System.out.println("1. Add a Student in the System :");
-		System.out.println("2. Remove a Student from the System :");
-		System.out.println("3. Display all Student from the System :");
-		System.out.println("4. Exit");
+		System.out.println();
+		System.out.println("\t\tPLEASE CHOOSE FOLLOWING OPTIONS");
+		System.out.println("\tCHOICE MUST BE BETWEEN (1 - 4) INTEGER NUMBER.");
+		System.out.println();
+		System.out.println("\t--------------------------------------------------");
+		System.out.println("\t|(1). TO ADD A STUDENT INTO THE SYSTEM.          |");
+		System.out.println("\t|(2). TO REMOVE A STUDENT FROM THE SYSTEM.       |");
+		System.out.println("\t|(3). TO DISPLAY ALL THE STUDENT FROM THE SYSTEM.|");
+		System.out.println("\t|(4). TO EXIT FROM THE SYSTEM.                   |");
+		System.out.println("\t|------------------------------------------------|");
+		System.out.println();
+		System.out.println("ENTER YOUR CHOICE:");
 	}
 
 }

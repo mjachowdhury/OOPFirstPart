@@ -6,10 +6,6 @@ public class Actor {
 	private String address;
 	private int age;
 
-	// Creating 3 Film object
-	// Film[] myFilms = new Film[3];
-	// private List<String> list;
-
 	private Film[] myFilms;
 
 	/**
@@ -19,14 +15,11 @@ public class Actor {
 	 * @param address
 	 * @param age
 	 */
-	Actor() {
-	}
 
 	public Actor(String name, String address, int age) {
 		this.name = name;
 		this.address = address;
-		this.age = age;
-		// list = new ArrayList<String>();
+		this.age = age;		 
 		myFilms = new Film[3];
 	}
 
@@ -94,21 +87,15 @@ public class Actor {
 		this.myFilms = myFilms;
 	}
 
-	/*
-	 * public String toString() { return "Actor [name=" + name + ", address=" +
-	 * address + ", age=" + age + ", myFilms=" + Arrays.toString(myFilms) + "]";
-	 * }
-	 */
-
 	public String toString() {
-		String actorText = "Actor [name=" + name + ", address=" + address + ", age=" + age + "]";
+		String actorText = "Actor Name :" + name + "\nAddress :" + address + "\nAge :" + age + ".";
 		String filmText = "";
 		// added the film text
 		for (int i = 0; i < myFilms.length; i++) {
 			filmText += myFilms[i].toString();
 		}
 
-		return actorText + "\n\t" + filmText;
+		return actorText + "\n" + filmText;
 	}
 
 	/*

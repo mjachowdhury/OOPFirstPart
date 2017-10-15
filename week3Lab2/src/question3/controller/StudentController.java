@@ -6,20 +6,38 @@ import question3.model.StudentService;
 public class StudentController {
 
 	private StudentService studentService;
+	private int noOfStudent = 0;
 
 	public StudentController() {
-		//Creating the StudentService object.
+		// Creating the StudentService object.
 		this.studentService = new StudentService();
 
 	}
 
+	/**
+	 * @return the noOfStudent
+	 */
+	public int getNoOfStudent() {
+		return noOfStudent;
+	}
+
+	/**
+	 * @param noOfStudent
+	 *            the noOfStudent to set
+	 */
+	public void setNoOfStudent(int noOfStudent) {
+		this.noOfStudent = noOfStudent;
+	}
+
 	/*
-	 * This method will add the student this method is connected StudentService and StudentView.Its working as a  controller
+	 * This method will add the student this method is connected StudentService
+	 * and StudentView.Its working as a controller
 	 */
 	public void addStudent(String firstNameFromView, String lastNameFromView, double markFromView) {
 		Student s = new Student(firstNameFromView, lastNameFromView, markFromView);
 
 		this.studentService.addStudentToList(s);
+		noOfStudent++;
 	}
 
 	/*
@@ -28,7 +46,8 @@ public class StudentController {
 	 */
 
 	/*
-	 * This method will remove the student this method is connected StudentService and StudentView.Its working as a  controller
+	 * This method will remove the student this method is connected
+	 * StudentService and StudentView.Its working as a controller
 	 */
 	public void removeStudent(String fname, String lName) {
 		int indexOfNameToRomove = -1;
@@ -37,11 +56,13 @@ public class StudentController {
 				indexOfNameToRomove = this.studentService.getTheStudents().indexOf(currentStudent);
 			}
 		}
+		// System.out.println("Did not find student.");
 		this.studentService.getTheStudents().remove(indexOfNameToRomove);
 	}
 
 	/*
-	 * This method will display all the student this method is connected StudentService and StudentView.Its working as a  controller
+	 * This method will display all the student this method is connected
+	 * StudentService and StudentView.Its working as a controller
 	 */
 	public void displayAllStudent() {
 		this.studentService.displayAllStudent();

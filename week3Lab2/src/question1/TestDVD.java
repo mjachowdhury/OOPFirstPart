@@ -30,18 +30,15 @@ package question1;
  */
 public class TestDVD {
 	public static void main(String[] args) {
-		DVD dvd1 = new DVD();// Creating new object for DVD with instance
-								// variable of dvd1
-		dvd1.setTitle("Song Bird"); // Setting the title
+		DVD dvd1 = new DVD(); // no constructor
+		dvd1.setTitle("Song Bird"); // no setter
 		dvd1.setGenre("Blues");
-		dvd1.setArtist("Eva Cassidy");// Setting the artist
-
-		DVD dvd2 = new DVD("Johnny b. Goode", "Chuck Berry", "George Hook");
-
-		// print(); // It will not work unless call by its instance variable
+		dvd1.setArtist("Eva Cassidy");// no semi colon
 		dvd1.print();
-		dvd2.print();
-
+		
+		System.out.println();
+		DVD dvd2 = new DVD("Johnny B. Goode", "Chuck Berry");
+		dvd2.print();// no print method
 	}
 
 }

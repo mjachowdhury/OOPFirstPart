@@ -5,16 +5,13 @@ import question2.view.MyView;
 public class MainTest {
 
 	public static void main(String[] args) {
+		System.out.println("\t\tWEL COME TO THE ACTOT/FILM PROGRAM");
+		System.out.println("\t\t==================================");
+		
 		// Create the user interface of the program
 		MyView theView = new MyView();
 		theView.startUserInterface();
-		/*
-		 * Film[] myFilms = new Film[3]; Film film1 = new Film("test1","1234");
-		 * Film film2 = new Film("test2","12345"); Film film3 = new
-		 * Film("test3","123456");
-		 * 
-		 * Actor actora = new Actor("wdw","ddd",45); actora.setMyFilms(myFilms);
-		 */
+		 
 	}
 
 }

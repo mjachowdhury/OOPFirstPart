@@ -98,8 +98,8 @@ public class Student {
 	public String toString() {
 		System.out.println("=================Student Details================");
 		System.out.println();
-		return ("Student Name  :\t " + this.getFirstName() + "  " + this.getLastName() + "\nStudent Mark  :\t "
-				+ this.getMark() + "\nStudent Grade :\t" + this.getGrade());
+		return ("STUDENT NAME  :\t " + this.getFirstName() + "  " + this.getLastName() + "\nSTUDENT MARK  :\t "
+				+ this.getMark() + "\nSTUDENT GRADE :\t" + this.getGrade());
 	}
 
 	/*
