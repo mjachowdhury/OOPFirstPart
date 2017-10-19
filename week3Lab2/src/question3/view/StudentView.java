@@ -128,7 +128,11 @@ public class StudentView {
 			printMenu();
 			menuChoice = keyboard.nextInt();
 		} // end of while loop
-		System.out.println("Good Bye");
+		System.out.println("\tWE HAVE SELECTED TO EXIT THE PROGRAM.");
+		System.out.println("\t\tTHANK YOU FOR USING.");
+		System.out.println("\t\t\tGOOD BYE");
+		System.out.println("\t-------------------------------------");
+		
 	}// end of method
 
 	public void printMenu() {
