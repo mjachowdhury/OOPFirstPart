@@ -3,7 +3,8 @@ package question1;
 public abstract class Employee {
 	private String firstName;
 	private String lastName;
-	private String PPSN;
+	private String PPSN;// unique number
+
 	/**
 	 * @param firstName
 	 * @param lastName
@@ -14,8 +15,7 @@ public abstract class Employee {
 		this.lastName = lastName;
 		this.PPSN = ppsn;
 	}
-	
-	
+
 	/**
 	 * @return the firstName
 	 */
@@ -23,14 +23,13 @@ public abstract class Employee {
 		return firstName;
 	}
 
-
 	/**
-	 * @param firstName the firstName to set
+	 * @param firstName
+	 *            the firstName to set
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-
 
 	/**
 	 * @return the lastName
@@ -39,14 +38,13 @@ public abstract class Employee {
 		return lastName;
 	}
 
-
 	/**
-	 * @param lastName the lastName to set
+	 * @param lastName
+	 *            the lastName to set
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
 
 	/**
 	 * @return the pPSN
@@ -55,19 +53,21 @@ public abstract class Employee {
 		return PPSN;
 	}
 
-
 	/**
-	 * @param pPSN the pPSN to set
+	 * @param pPSN
+	 *            the pPSN to set
 	 */
 	public void setPPSN(String pPSN) {
 		PPSN = pPSN;
 	}
 
+	// Abstract method for this class means that, that method have to implement
+	// rest of the class whoever will extends employee class.
+	// public abstract boolean getStatus();
+	public abstract void getStatus();
 
-	public abstract boolean getStatus();
-	
-	public String toString(){
-		return String.format("%s %s\nPPS Number : %s", getFirstName(),getLastName(),getPPSN() );
+	public String toString() {
+		return String.format("%s %s\nPPS Number : %s", getFirstName(), getLastName(), getPPSN());
 	}
 
 }
