@@ -27,8 +27,8 @@ public class TestEmployee {
 		/*
 		 * Iterating all the employee
 		 */
-		System.out.println("Employees Details:");
-		System.out.println("=================\n");
+		System.out.println("Full & Part Time Employees Details:");
+		System.out.println("==================================\n");
 		for (Employee currentEmployee : employee) {
 			System.out.println(currentEmployee);// invokes toString
 			System.out.println();
