@@ -1,5 +1,7 @@
 package question1;
-
+/*
+ * This class contains about part time employee details
+ */
 public class PartTimeEmployee extends Employee {
 
 	private double hourlyPay;
@@ -85,23 +87,13 @@ public class PartTimeEmployee extends Employee {
 			System.out.println("Your are part time employee.");
 	}
 
-	/*public String toString() {
-		return String.format("Part Time Employee: %s\n%s: \u20ac%s, %s: ", 
-				super.toString(), "Hourly Pay ",
-				getHourlyPay(), "Hours Worked ", 
-				getHours(), "Is Part Time :", 
-				isPartTime());
-	}*/
-	
-	 
 	public String toString() {
-		return "PartTimeEmployee HourlyPay :" + hourlyPay + "\nHours :" + hours + "\nIsPartTime :" + isPartTime;
-	}
-	
-	public void print(){
-		System.out.println(toString());
+		return super.toString() + "\nHourly Pay : " + hourlyPay + "\nHours :" + hours + "\nStatus Is Part Time? : "
+				+ isPartTime;
 	}
 
-	
+	public void print() {
+		System.out.println(toString());
+	}
 
 }

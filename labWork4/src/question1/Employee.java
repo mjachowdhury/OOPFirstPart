@@ -1,5 +1,8 @@
 package question1;
 
+/*
+ * This class contains about employee details
+ */
 public abstract class Employee {
 	private String firstName;
 	private String lastName;
@@ -66,7 +69,6 @@ public abstract class Employee {
 	// public abstract boolean getStatus();
 	public abstract void getStatus();
 
-	 
 	public String toString() {
 		return "Employee: \nFirstName :" + firstName + "\nLastName :" + lastName + "\nPPSN\t :" + PPSN;
 	}

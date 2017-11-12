@@ -1,5 +1,7 @@
 package question1;
-
+/*
+ * This class contains about full time employee details
+ */
 public class FullTimeEmployee extends Employee {
 
 	private double monthlySalary;
@@ -17,9 +19,6 @@ public class FullTimeEmployee extends Employee {
 
 		setMonthlySalary(monthlySalary);
 		setFullTime(isFullTime);
-
-		// this.monthlySalary = monthlySalary;
-		// this.isFullTime = isFullTime;
 	}
 
 	/**
@@ -66,30 +65,12 @@ public class FullTimeEmployee extends Employee {
 			System.out.println("Full Time employee");
 	}
 
-	 
-/*
-	public String toString() {
-		return String.format("Fulltime Employee: %s\n%s : \u20ac%s,", 
-				super.toString(), "Monthly Salary",
-				getMonthlySalary(), 
-				"Status is:", isFullTime());
-	}*/
-	
-	
-	/*public String toString() {
-		return "FullTimeEmployee MonthlySalary : " + monthlySalary + "\nIsFullTime : " + isFullTime;
-	}*/
-	
-	public void print(){
+	public void print() {
 		System.out.println(toString());
 	}
 
-	 
 	public String toString() {
-		return super.toString() +"\nMonthlySalary : " + monthlySalary + "\nStatus Is FullTime? : " + isFullTime;
+		return super.toString() + "\nMonthlySalary : " + monthlySalary + "\nStatus Is FullTime? : " + isFullTime;
 	}
-
-	 
-	
 
 }
