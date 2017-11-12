@@ -11,7 +11,7 @@ public class TestEmployee {
 		PartTimeEmployee partTimeEmployee1 = new PartTimeEmployee("Jason", "Howard", "PPS-555-666", 12.50, 25, true);
 		PartTimeEmployee partTimeEmployee2 = new PartTimeEmployee("Sara", "Brosnan", "PPS-777-888", 14.50, 35, true);
 
-		System.out.println("Employee Status individually:\n");
+		/*System.out.println("Employee Status individually:\n");
 		
 		System.out.printf("%s\n%s: \u20ac%s,\n\n", fullTimeEmployee1, "Earned",
 				fullTimeEmployee1.calculateMonthlySalary(), "Status is:", fullTimeEmployee1.isFullTime());
@@ -23,7 +23,7 @@ public class TestEmployee {
 				partTimeEmployee1.calculateWeeklySalary(), "Status is:", partTimeEmployee1.isPartTime());
 		
 		System.out.printf("%s\n%s: \u20ac%s,\n\n", partTimeEmployee2, "Earned",
-				partTimeEmployee2.calculateWeeklySalary(), "Status is:", partTimeEmployee2.isPartTime());
+				partTimeEmployee2.calculateWeeklySalary(), "Status is:", partTimeEmployee2.isPartTime());*/
 
 		ArrayList<Employee> employee = new ArrayList<Employee>();
 
@@ -45,9 +45,9 @@ public class TestEmployee {
 			System.out.println();
 		}
 		// get type name of each object in employees array
-		for (int i = 0; i < employee.size(); i++) {
+		/*for (int i = 0; i < employee.size(); i++) {
 			System.out.printf("Employee %d is a %s\n", i, employee.getClass().getName());
-		}
+		}*/
 	}
 
 }

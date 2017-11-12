@@ -67,12 +67,29 @@ public class FullTimeEmployee extends Employee {
 	}
 
 	 
-
+/*
 	public String toString() {
 		return String.format("Fulltime Employee: %s\n%s : \u20ac%s,", 
 				super.toString(), "Monthly Salary",
 				getMonthlySalary(), 
 				"Status is:", isFullTime());
+	}*/
+	
+	
+	/*public String toString() {
+		return "FullTimeEmployee MonthlySalary : " + monthlySalary + "\nIsFullTime : " + isFullTime;
+	}*/
+	
+	public void print(){
+		System.out.println(toString());
 	}
+
+	 
+	public String toString() {
+		return super.toString() +"\nMonthlySalary : " + monthlySalary + "\nStatus Is FullTime? : " + isFullTime;
+	}
+
+	 
+	
 
 }

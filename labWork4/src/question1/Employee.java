@@ -66,8 +66,13 @@ public abstract class Employee {
 	// public abstract boolean getStatus();
 	public abstract void getStatus();
 
+	 
 	public String toString() {
-		return String.format("%s %s\nPPS Number : %s", getFirstName(), getLastName(), getPPSN());
+		return "Employee: \nFirstName :" + firstName + "\nLastName :" + lastName + "\nPPSN\t :" + PPSN;
+	}
+
+	public void print() {
+		System.out.println(toString());
 	}
 
 }
