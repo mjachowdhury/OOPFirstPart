@@ -70,7 +70,7 @@ public class FullTimeEmployee extends Employee {
 	}
 
 	public String toString() {
-		return super.toString() + "\nMonthlySalary : " + monthlySalary + "\nStatus Is FullTime? : " + isFullTime;
+		return super.toString() + "\nTotal MonthlySalary : " + monthlySalary + "\nStatus Is FullTime? : " + isFullTime;
 	}
 
 }

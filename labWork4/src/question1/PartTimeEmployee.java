@@ -88,7 +88,7 @@ public class PartTimeEmployee extends Employee {
 	}
 
 	public String toString() {
-		return super.toString() + "\nHourly Pay : " + hourlyPay + "\nHours :" + hours + "\nStatus Is Part Time? : "
+		return super.toString() + "\nHourly Pay : " + hourlyPay + "\nHours :" + hours + "\nTotal Weekly Salary: "+calculateWeeklySalary()+"\nStatus Is Part Time? : "
 				+ isPartTime;
 	}
 
