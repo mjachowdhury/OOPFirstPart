@@ -1,10 +1,10 @@
-package questionOne;
+package questionTwo.model;
 
 import java.util.ArrayList;
 
 public class ObjectList {
 
-	public ArrayList<Object> oList;
+	private ArrayList<Object> oList;
 	private int maxNumber;
 
 	public ObjectList(int max) {
@@ -12,25 +12,29 @@ public class ObjectList {
 		this.maxNumber = max;
 	}
 
+	public ObjectList(){
+		oList = new ArrayList<Object>();
+	}
+	
 	/*
 	 * This method will add object
 	 */
-	/*
-	 * public void add(Object o){ this.oList.add(o); }
-	 */
+	
+	  public void add(Object o){ this.oList.add(o); }
+	 
 
 	/*
 	 * This method will add object and also will check with max number if its
 	 * equals with max number will not add the object else will add
 	 */
-	public String add(Object o) {
+	/*public String add(Object o) {
 		if (oList.size() >= maxNumber) {
 			return "Not added the Object " + o.toString();
 		} else {
 			this.oList.add(o);
 			return "Object added " + o.toString();
 		}
-	}
+	}*/
 
 	/*
 	 * This method will check whether its full or not with variable max size
@@ -84,7 +88,7 @@ public class ObjectList {
 	/*
 	 * This method will removed object by its reference
 	 */
-	public void remove(Object o) {
+	/*public void remove(Object o) {
 		if (!isEmpty().equals("Yes")) {
 			if (oList.contains(o)) {
 				this.oList.remove(o);
@@ -93,14 +97,14 @@ public class ObjectList {
 				System.out.println(o + " Object not removed.");
 			}
 		}
-	}
+	}*/
 
 	/*
 	 * This method will remove object
 	 */
-	/*
-	 * public void remove(Object o){ this.oList.remove(o); }
-	 */
+	
+	  public void remove(Object o){ this.oList.remove(o); }
+	 
 
 	/**
 	 * @return the oList

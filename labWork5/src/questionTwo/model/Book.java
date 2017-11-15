@@ -1,4 +1,4 @@
-package questionOne;
+package questionTwo.model;
 
 public class Book {
 
@@ -7,9 +7,9 @@ public class Book {
 	private String author;
 	private double price;
 
-	public Book() {
-	}
-
+	/*public Book() {
+	}*/
+	 
 	/**
 	 * @param title
 	 * @param iSBN
@@ -32,32 +32,18 @@ public class Book {
 	}
 
 	/**
-	 * @return the iSBN
-	 */
-	public int getISBN() {
-		return ISBN;
-	}
-
-	/**
-	 * @return the author
-	 */
-	public String getAuthor() {
-		return author;
-	}
-
-	/**
-	 * @return the price
-	 */
-	public double getPrice() {
-		return price;
-	}
-
-	/**
 	 * @param title
 	 *            the title to set
 	 */
 	public void setTitle(String title) {
 		this.title = title;
+	}
+
+	/**
+	 * @return the iSBN
+	 */
+	public int getISBN() {
+		return ISBN;
 	}
 
 	/**
@@ -69,6 +55,13 @@ public class Book {
 	}
 
 	/**
+	 * @return the author
+	 */
+	public String getAuthor() {
+		return author;
+	}
+
+	/**
 	 * @param author
 	 *            the author to set
 	 */
@@ -77,15 +70,18 @@ public class Book {
 	}
 
 	/**
+	 * @return the price
+	 */
+	public double getPrice() {
+		return price;
+	}
+
+	/**
 	 * @param price
 	 *            the price to set
 	 */
 	public void setPrice(double price) {
 		this.price = price;
-	}
-
-	public String toString() {
-		return "Book [title=" + title + ", ISBN=" + ISBN + ", author=" + author + ", price=" + price + "]";
 	}
 
 }
