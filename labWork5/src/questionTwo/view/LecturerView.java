@@ -59,10 +59,7 @@ public class LecturerView {
 				System.out.println("YOU HAVE CHOOSE TO FIND LECTURERS :");
 				System.out.println("PLEASE ENTER THE ID NUMBER:");
 				int id = keyboard.nextInt();
-				this.lb.findLecturer(id);
-				
-			 
-				
+				this.lb.findLecturer(id);			 				
 				break;
 			}
 			case ADD_BOOK: {
@@ -91,12 +88,28 @@ public class LecturerView {
 				break;
 			}
 			case REMOVE_BOOK: {
+				System.out.println("YOU HAVE CHOOSE TO REMOVE THE BOOK");
+				
+				System.out.println("PLEASE ENTER THE ISBN NUMBER:");
+				int iSBN = keyboard.nextInt();
+				
+				/*System.out.println("PLEASE ENTER THE AUTHOR NAME:");
+				String author = keyboard.next();*/
+
+				this.lb.removeBookFromSystem(iSBN);
+				System.out.println("BOOK REMOVED SUCCESSFULLY FROM THE SYSTEM");
 				break;
+				 
 			}
 			case SEARCH_BOOK: {
+				System.out.println("YOU HAVE CHOOSE TO FIND A BOOK :");
+				System.out.println("PLEASE ENTER THE ISBN NUMBER:");
+				int iSBN = keyboard.nextInt();
+				this.lb.searchBookFromSystem(iSBN);
 				break;
 			}
 			case CALCULATE_YEARLY_BOOK_PAYMENT: {
+				this.lb.calculateTotalBookPrice();
 				break;
 			}
 			case SHOW_ALL_THE_BOOK: {
